@@ -1,15 +1,39 @@
-<form action="#" method="post">
-    <div style="margin-bottom: 10px;">
-        <label>姓名：</label><br>
-        <input type="text" name="name" required>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>联系我</title>
+    <style>
+        body { background-color: lightblue; text-align: center; }
+        .form-box {
+            background: white;
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid gray;
+        }
+        input, textarea { width: 90%; margin: 10px 0; }
+    </style>
+</head>
+<body>
+
+    <h2>给我留言</h2>
+    <a href="index.html">返回首页</a>
+
+    <div class="form-box">
+        <form action="#" method="post">
+            姓名：<br>
+            <input type="text" name="name"><br>
+            
+            邮箱：<br>
+            <input type="email" name="email"><br>
+            
+            你想说的话：<br>
+            <textarea name="message" rows="5"></textarea><br>
+            
+            <input type="submit" value="提交消息">
+        </form>
     </div>
-    <div style="margin-bottom: 10px;">
-        <label>邮箱：</label><br>
-        <input type="email" name="email" required>
-    </div>
-    <div style="margin-bottom: 10px;">
-        <label>留言：</label><br>
-        <textarea name="message" rows="5" required></textarea>
-    </div>
-    <button type="submit">发送消息</button>
-</form>
+
+</body>
+</html>

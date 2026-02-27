@@ -1,161 +1,89 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>我的个人博客</title>
-  <style>
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <title>我的个人博客</title>
+    <style>
+        /* 初学者通常喜欢用简单的背景色和固定的宽度 */
+        body {
+            background-color: lightblue; /* 换成更基础的颜色 */
+            font-family: "新宋体";
+            margin: 0;
+        }
 
-    body {
-      font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
-    }
+        /* 简单的导航栏 */
+        .nav {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+        .nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none; /* 唯一会的进阶属性：去掉下划线 */
+            font-size: 20px;
+        }
 
-    header {
-      background: #b91f1f;
-      color: white;
-      padding: 1rem 0;
-    }
+        /* 主体部分不再用 flex，直接堆叠 */
+        .content {
+            width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border: 2px solid black; /* 明显的边框 */
+        }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
+        .post {
+            border-bottom: 1px dashed gray; /* 简单的虚线分割线 */
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #1abc9c;
-    }
-
-    main {
-      display: flex;
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-
-    .posts {
-      flex: 3;
-    }
-
-    .sidebar {
-      flex: 1;
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    article {
-      background: white;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    h1, h2, h3 {
-      margin-bottom: 0.5rem;
-    }
-
-    .post-meta {
-      color: #777;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem 0;
-      color: #777;
-      border-top: 1px solid #eee;
-    }
-
-    .social-links {
-      margin-top: 1rem;
-    }
-
-    .social-links a {
-      margin-right: 10px;
-      text-decoration: none;
-      color: #2c3e50;
-    }
-
-    @media (max-width: 768px) {
-      main {
-        flex-direction: column;
-      }
-    }
-  </style>
+        h1 { color: darkblue; }
+        
+        /* 侧边栏改为放在底部或简单排列 */
+        .about-me {
+            background-color: #eee;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <nav>
-        <ul>
-          <li><a href="#">首页</a></li>
-          <li><a href="contact.html">联系反馈</a></li>
-        </ul>
-      </nav>
+    <div class="nav">
+        <a href="index.html">首页</a>
+        <a href="contact.html">联系反馈</a>
     </div>
-  </header>
 
-  <div class="container">
-    <main>
-      <section class="posts">
-        <article>
-          <h2><a href="#">欢迎来到我的博客</a></h2>
-          <div class="post-meta">2025年12月18日 · 标签：生活、技术</div>
-          <p></p>
-        </article>
-
-        <article>
-          <h2><a href="#">如何开始学习前端开发</a></h2>
-          <div class="post-meta">2025年12月10日 · 标签：前端、教程</div>
-          <p></p>
-        </article>
-
-        <article>
-          <h2><a href="#">旅行日记：哈尔滨之夏</a></h2>
-          <div class="post-meta">2025年11月25日 · 标签：旅行、摄影</div>
-          <p></p>
-        </article>
-      </section>
-
-      <aside class="sidebar">
-        <h3>关于我</h3>
-        <p>你好！我是ZXC，一名计算机爱好者。热爱代码，也热爱生活。</p>
-
-        <div class="social-links">
-          <h3>关注我</h3>
-          <a href=https://github.com/zxc527263-cpu target="_blank">GitHub</a>
-          <a href=https://www.youtube.com/@xcz-p1g target="_blank">YouTube</a>
+    <div class="content">
+        <h1>欢迎来到我的个人博客</h1>
+        <hr> <div class="post">
+            <h2>欢迎来到我的博客</h2>
+            <p>日期：2025年12月18日</p>
+            <p>这是我的第一篇博客文章！希望大家喜欢。</p>
         </div>
-      </aside>
-    </main>
-  </div>
 
-  
+        <div class="post">
+            <h2>如何开始学习前端开发</h2>
+            <p>日期：2025年12月10日</p>
+            <p>前端开发真的很有趣，大家一起加油吧！</p>
+        </div>
+
+        <div class="about-me">
+            <h3>关于我</h3>
+            <p>我是ZXC，一个喜欢电脑的初学者。</p>
+            <p>
+                我的链接：
+                <a href="https://github.com/zxc527263-cpu">GitHub</a> | 
+                <a href="https://www.youtube.com/@xcz-p1g">YouTube</a>
+            </p>
+        </div>
+    </div>
+
+    <center><p>© 2025 ZXC的博客</p></center>
+
 </body>
 </html>
